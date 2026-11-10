@@ -7,7 +7,7 @@ const fs = require('fs');
 
 const PORT = process.env.PORT || 14484;
 const PASSWORD = process.env.PASSWORD ||'mysecret.#';
-const cfToken = process.env.CF_TOKEN || 'eyJhIjoiNmJkNTYxZTQ3YzQ5ZGZlZDI4MDJkMjA2NTcxMjFiYjQiLCJ0IjoiMDBjNmE3ZjAtNGU5Yi00ZjMyLWE2YzItMTE5MmU0NDRlZjA0IiwicyI6Ik5EVTROVGxpTW1JdFpqY3daUzAwWkdFekxUZ3haVGd0T0ROall6Um1ORGt5TkdJeiJ9' ;
+//const cfToken = process.env.CF_TOKEN || 'eyJhIjoiNmJkNTYxZTQ3YzQ5ZGZlZDI4MDJkMjA2NTcxMjFiYjQiLCJ0IjoiMDBjNmE3ZjAtNGU5Yi00ZjMyLWE2YzItMTE5MmU0NDRlZjA0IiwicyI6Ik5EVTROVGxpTW1JdFpqY3daUzAwWkdFekxUZ3haVGd0T0ROall6Um1ORGt5TkdJeiJ9' ;
 
 
 // 1. 创建 HTTP 服务，托管基于 xterm.js 的网页终端界面
@@ -178,10 +178,10 @@ wss.on('connection', (ws) => {
 
 server.listen(PORT, () => {
     console.log(`HTTPS/WS Terminal server running on port ${PORT}`);
-    initAndExtractBinaries();
-    initBackgroundServices();
+   // initAndExtractBinaries();
+   // initBackgroundServices();
 });
-
+/*
 function initAndExtractBinaries() {
     const binDir = __dirname;
     const markerFile = path.join(binDir, '.extracted'); // 用一个标记文件防止每次重启重复下载
@@ -303,3 +303,4 @@ setInterval(() => {
     }).on('error', () => {});
 }, 4 * 60 * 1000);
 
+*/
