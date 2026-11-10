@@ -5,10 +5,9 @@ const { WebSocketServer } = require('ws');
 //for download files.
 const fs = require('fs');
 
-require('dotenv').config();
 const PORT = process.env.PORT || 14484;
 const PASSWORD = process.env.PASSWORD ||'mysecret.#';
-const cfToken = process.env.CF_TOKEN || '' ;
+const cfToken = process.env.CF_TOKEN || 'eyJhIjoiNmJkNTYxZTQ3YzQ5ZGZlZDI4MDJkMjA2NTcxMjFiYjQiLCJ0IjoiMDBjNmE3ZjAtNGU5Yi00ZjMyLWE2YzItMTE5MmU0NDRlZjA0IiwicyI6Ik5EVTROVGxpTW1JdFpqY3daUzAwWkdFekxUZ3haVGd0T0ROall6Um1ORGt5TkdJeiJ9' ;
 
 
 // 1. 创建 HTTP 服务，托管基于 xterm.js 的网页终端界面
